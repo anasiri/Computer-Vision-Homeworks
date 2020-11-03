@@ -1,0 +1,22 @@
+image = imread('Homeworks\Images\2\Camera Man.bmp');
+hist = histeq(image,512);
+adjust = imadjust(image);
+
+subplot(2,3,1);
+imshow(image);
+title('orig');
+subplot(2,3,2);
+imshow(hist);
+title('histeq');
+subplot(2,3,3);
+imshow(adjust);
+title('imadjust');
+subplot(2,3,4);
+imhist(image);
+title('orig');
+subplot(2,3,5);
+imhist(hist);
+title('histeq');
+subplot(2,3,6);
+imhist(adjust);
+title('imadjust');
